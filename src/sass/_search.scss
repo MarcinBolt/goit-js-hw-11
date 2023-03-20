@@ -1,0 +1,67 @@
+.search-form {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10px;
+  background-color: #4056b4;
+  font-size: 18px;
+  line-height: 2;
+  z-index: 5;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  //   border: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 0;
+  border-right: 2px solid transparent;
+}
+.search-icon {
+  display: flex;
+  height: 20px;
+}
+
+input {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 2px;
+  width: 350px;
+  height: 40px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 0;
+}
+
+form:focus-within input {
+  border-top: 2px solid lightseagreen;
+  border-bottom: 2px solid lightseagreen;
+  border-left: 2px solid lightseagreen;
+  border-right: 0;
+  outline: none;
+}
+form:focus-within button {
+  border-top: 2px solid lightseagreen;
+  border-bottom: 2px solid lightseagreen;
+  border-left: 0;
+  border-right: 2px solid lightseagreen;
+  outline: none;
+}
