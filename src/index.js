@@ -86,7 +86,7 @@ function renderFilteredMatchingImages(images) {
   const markup = images
     .map(image => {
       return `<a href="${image.largeImageURL}"><div class="photo-card">
-  <img class="photo-card__img" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+  <img class="photo-card__img" src="${image.webformatURL}" alt="${image.tags}" width="375px" height="200px" loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes</b>${image.likes}
