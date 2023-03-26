@@ -106,6 +106,17 @@ function renderFilteredMatchingImages(images) {
     .join('');
   galleryDOM.insertAdjacentHTML('beforeend', markup);
 
+  if (page > 1) {
+    const { height: cardHeight } = document
+      .querySelector('.gallery')
+      .firstElementChild.getBoundingClientRect();
+
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: 'smooth',
+    });
+  }
+
   let lightbox = new SimpleLightbox('.gallery a', {
     /* options */
     captionsData: 'alt',
