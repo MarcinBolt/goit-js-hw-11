@@ -37,6 +37,9 @@ function handleClick(e) {
 
 const notifyAboutHowManyMatchesFound = totalHits =>
   Notiflix.Notify.info(`Hooray! We found ${totalHits} images.`);
+  
+const notifyAboutReachedResults = () =>
+  Notiflix.Notify.info(`We're sorry, but you've reached the end of search results.`);
 
 const notifyAboutNoMatching = () => {
   Notiflix.Notify.failure(
@@ -75,6 +78,7 @@ async function getImage(searchingPhrases) {
       page += 1;
     } else {
       buttonLoadMoreDOM.classList.add('is-hidden');
+	  notifyAboutReachedResults();
     }
   } catch (error) {
     console.error(error);
